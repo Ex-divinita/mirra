@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Creation Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Add Inter font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Simple hamburger transition */
+        .hamburger-line {
+            transition: all 0.3s ease-in-out;
+        }
+        .nav-toggle.active .hamburger-line:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        .nav-toggle.active .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+        .nav-toggle.active .hamburger-line:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+    <!-- Header & Navigation Bar -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div>
+                <a href="#" class="text-xl font-bold text-gray-900">My Portfolio</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="nav-toggle" class="md:hidden z-50 nav-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <div class="space-y-2">
+                    <span class="block w-8 h-0.5 bg-gray-900 hamburger-line"></span>
+                    <span class="block w-8 h-0.5 bg-gray-900 hamburger-line"></span>
+                    <span class="block w-8 h-0.5 bg-gray-900 hamburger-line"></span>
+                </div>
+            </button>
+            
+            <!-- Navigation Links (Desktop) -->
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#projects" class="font-medium text-gray-600 hover:text-blue-600">Projects</a></li>
+                <li><a href="#about" class="font-medium text-gray-600 hover:text-blue-600">About</a></li>
+                <li><a href="#contact" class="font-medium text-gray-600 hover:text-blue-600">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="nav-menu" class="hidden md:hidden bg-white shadow-lg">
+            <ul class="flex flex-col items-center py-4">
+                <li><a href="#projects" class="block py-3 px-6 text-lg font-medium text-gray-700 hover:bg-gray-100 w-full text-center nav-link">Projects</a></li>
+                <li><a href="#about" class="block py-3 px-6 text-lg font-medium text-gray-700 hover:bg-gray-100 w-full text-center nav-link">About</a></li>
+                <li><a href="#contact" class="block py-3 px-6 text-lg font-medium text-gray-700 hover:bg-gray-100 w-full text-center nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="container mx-auto px-6 py-24 md:py-32 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-4">
+                Hello, I'm Mirra
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+                I build clean, modern, and user-friendly websites. Welcome to my personal portfolio.
+            </p>
+            <a href="#projects" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-blue-700 transition duration-300">
+                See My Work
+            </a>
+        </section>
+
+        <!-- Projects Gallery Section -->
+        <section id="projects" class="bg-gray-50 py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+                    My Creations
+                </h2>
+                
+                <!-- Project Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- PROJECT 1 (Copy this block for new projects) -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="https://placehold.co/600x400/e2e8f0/334155?text=Project+Screenshot" alt="Screenshot of Project 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Project Title 1</h3>
+                            <p class="text-gray-600 mb-4">
+                                A brief description of the website, its purpose, and the technology used.
+                            </p>
+                            <a href="#" target="_blank" class="font-bold text-blue-600 hover:text-blue-700">
+                                Visit Website &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="https://placehold.co/600x400/e2e8f0/334155?text=Project+Screenshot" alt="Screenshot of Project 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Project Title 2</h3>
+                            <p class="text-gray-600 mb-4">
+                                A brief description of the website, its purpose, and the technology used.
+                            </p>
+                            <a href="#" target="_blank" class="font-bold text-blue-600 hover:text-blue-700">
+                                Visit Website &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="https://placehold.co/600x400/e2e8f0/334155?text=Project+Screenshot" alt="Screenshot of Project 3" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Project Title 3</h3>
+                            <p class="text-gray-600 mb-4">
+                                A brief description of the website, its purpose, and the technology used.
+                            </D>
+                            <a href="#" target="_blank" class="font-bold text-blue-600 hover:text-blue-700">
+                                Visit Website &rarr;
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Add more project blocks here as needed -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About Me</h2>
+                <p class="text-lg text-gray-600 mb-4">
+                    I am a passionate web developer focused on creating simple and effective digital experiences. I specialize in front-end development and love bringing ideas to life in the browser.
+                </p>
+                <p class="text-lg text-gray-600">
+                    When I'm not coding, I enjoy [Your Hobby 1] and [Your Hobby 2].
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-gray-900 text-white py-20">
+            <div class="container mx-auto px-6 text-center max-w-2xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Get in Touch</h2>
+                <p class="text-lg text-gray-300 mb-8">
+                    I'm currently available for freelance work or new opportunities. Have a project in mind? Let's talk.
+                </p>
+                <a href="mailto:your.email@example.com" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-blue-700 transition duration-300">
+                    Email Me
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-600">&copy; 2025 [Your Name]. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        // Get the mobile menu button, the menu itself, and the links
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        // Function to toggle the menu
+        function toggleMenu() {
+            navMenu.classList.toggle('hidden');
+            navToggle.classList.toggle('active');
+        }
+
+        // Add click event listener to the toggle button
+        navToggle.addEventListener('click', toggleMenu);
+
+        // Add click event listeners to each menu link to close the menu on click
+        navLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+    </script>
+
+</body>
+</html>
